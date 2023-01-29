@@ -20,7 +20,8 @@ public class Email {
    public Email (String firstName,String lastName){
        this.firstName=firstName;
        this.lastName=lastName;
-       System.out.println("E-mail created: "+ this.firstName + "."+ this.lastName + "@.department.company.com");
+       this.department=department();
+       System.out.println("E-mail created: "+ this.firstName + "."+ this.lastName + "@" +department+".company.com");
    }
    String department (){
        System.out.println("Type for dep:/n1 - sales /n2 - dev /n3 - marketing");
