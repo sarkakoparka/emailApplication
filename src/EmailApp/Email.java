@@ -7,17 +7,30 @@ package EmailApp;
     email address
      Have get methods to display the name, email, and mailbox capacity*/
 
+import java.util.Scanner;
+
 public class Email {
    private String firstName;
     private String lastName;
    private String department;
    private String pswd;
    private int mailboxCapacity;
-   String alternativeEmail;
+   private String alternativeEmail;
 
-   Email (String firstName,String lastName){
+   public Email (String firstName,String lastName){
        this.firstName=firstName;
        this.lastName=lastName;
+       System.out.println("E-mail created: "+ this.firstName + "."+ this.lastName + "@.department.company.com");
+   }
+   String department (){
+       System.out.println("Type for dep:/n1 - sales /n2 - dev /n3 - marketing");
+       Scanner in = new Scanner(System.in);
+       int dep = in.nextInt();
+       if (dep == 1){return "sales";}
+       else if (dep ==2 ){ return "dev"; }
+       else if (dep == 3){ return "marketing";}
+       else {return "none";}
+
    }
 
    // generate e-mail with following syntax
